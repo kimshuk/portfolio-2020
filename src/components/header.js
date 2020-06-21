@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Grid from "@material-ui/core/Grid"
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import Typography from "@material-ui/core/Typography"
@@ -10,25 +11,23 @@ import MenuIcon from "@material-ui/icons/Menu"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <AppBar position="static">
-      <Toolbar>
-        <IconButton edge="start" color="inherit" aria-label="menu">
-          <MenuIcon />
-        </IconButton>
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: `#000`,
-              textDecoration: `none`,
-            }}
-          >
-            <Typography variant="h6">{siteTitle}</Typography>
-          </Link>
-        </h1>
-        <Button color="inherit">Login</Button>
-      </Toolbar>
-    </AppBar>
+    <Grid container>
+      <IconButton edge="start" color="inherit" aria-label="menu">
+        <MenuIcon />
+      </IconButton>
+      <h1 style={{ margin: 0 }}>
+        <Link
+          to="/"
+          style={{
+            color: `#000`,
+            textDecoration: `none`,
+          }}
+        >
+          <Typography variant="h6">{siteTitle}</Typography>
+        </Link>
+      </h1>
+    </Grid>
+
     <footer>
       © {new Date().getFullYear()}, Built by
       {` `}

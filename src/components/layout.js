@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Grid from "@material-ui/core/Grid"
 
 import Header from "./header"
 import "./layout.css"
@@ -24,10 +25,14 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
-    </>
+    <Grid container>
+      <Grid item xs={12} md={3}>
+        <Header siteTitle={data.site.siteMetadata.title} />
+      </Grid>
+      <Grid item xs={12} md={9}>
+        <main>{children}</main>
+      </Grid>
+    </Grid>
   )
 }
 
