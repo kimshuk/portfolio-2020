@@ -27,18 +27,6 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </Grid>
-
-    <footer>
-      © {new Date().getFullYear()}, Built by
-      {` `}
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href="https://www.linkedin.com/in/andrew-kim-72b5598b/"
-      >
-        Andrew Kim
-      </a>
-    </footer>
   </header>
 )
 

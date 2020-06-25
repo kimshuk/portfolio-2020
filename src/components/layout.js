@@ -26,10 +26,8 @@ const Layout = ({ children }) => {
 
   return (
     <Grid container>
-      <Grid item xs={12} md={3}>
+      <Grid item xs={12}>
         <Header siteTitle={data.site.siteMetadata.title} />
-      </Grid>
-      <Grid item xs={12} md={9}>
         <main>{children}</main>
       </Grid>
     </Grid>
